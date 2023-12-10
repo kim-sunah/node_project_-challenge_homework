@@ -1,0 +1,33 @@
+# 목록조회
+GET http://localhost:3000/api/products HTTP/1.1
+###
+#상세조회
+GET http://localhost:3000/api/products/1 HTTP/1.1
+
+### 
+# 생성
+POST http://localhost:3000/api/products HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTcwMjI1MDIxNCwiZXhwIjoxNzAyMjkzNDE0fQ.FyQSgEiQfzOQenuhDS3hU-c8_bEOW4LyFA7OCuMpGkI
+
+{
+  "title": "프로젝트 생성 타이틀",
+  "content": "프로젝트 생성 내용"
+}
+
+### 
+# @name updateProduct
+PUT http://localhost:3000/api/products/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTcwMjI1MDIxNCwiZXhwIjoxNzAyMjkzNDE0fQ.FyQSgEiQfzOQenuhDS3hU-c8_bEOW4LyFA7OCuMpGkI
+
+{
+  "title": "프로젝트수정 타이틀",
+  "content": "프로젝트 수정 내용",
+  "status": "SOLD_OUT"
+}
+
+### 
+# @name deleteProduct
+DELETE http://localhost:3000/api/products/1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTcwMjI1MDIxNCwiZXhwIjoxNzAyMjkzNDE0fQ.FyQSgEiQfzOQenuhDS3hU-c8_bEOW4LyFA7OCuMpGkI
